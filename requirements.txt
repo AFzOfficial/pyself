@@ -1,0 +1,6 @@
+aiocron~=1.8
+Pillow~=10.1.0
+psutil~=5.9.6
+Pyrogram~=2.0.106
+TgCrypto~=1.2.5
+pytz~=2023.3.post1

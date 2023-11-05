@@ -1,0 +1,9 @@
+.venv
+.vscode
+.env
+venv
+env
+__pycache__
+config.ini
+pyself.session
+pyself.session-journal
