@@ -1,6 +1,7 @@
 import os
 import re
 import pytz
+import string
 import random
 import asyncio
 import aiocron
@@ -16,7 +17,6 @@ from pyrogram.raw import functions
 from pyrogram.enums.chat_action import ChatAction
 
 from utils import delete_message, write_text_on_image
-from db import profile
 
 
 logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
@@ -44,6 +44,15 @@ ACTIONS = [
     ChatAction.UPLOAD_VIDEO,
     ChatAction.FIND_LOCATION
 ]
+
+
+profile = {
+    "time": False,
+    "photo": False,
+    "status": False,
+    "action": False,
+    "font": str.maketrans(string.digits, '⁰¹²³⁴⁵⁶⁷⁸⁹'),
+}
 
 
 app = Client(
