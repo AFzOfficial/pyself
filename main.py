@@ -146,9 +146,9 @@ async def profile_handler(client: Client, message: Message):
         case '.photo':
             profile["photo"] = status == 'on'
         case '.action':
-            profile["status"] = status == 'on'
-        case '.status':
             profile["action"] = status == 'on'
+        case '.status':
+            profile["status"] = status == 'on'
 
     await message.edit('`Profile Handler Updated`')
 
@@ -247,7 +247,7 @@ async def code_handler(client: Client, message: Message):
 async def action_handler(client: Client, message: Message):
     if profile.get("action", False):
         await app.send_chat_action(message.chat.id, random.choice(ACTIONS))
-        await asyncio.sleep(2)
+        await asyncio.sleep(5)
 
 
 @aiocron.crontab('*/1 * * * *')
