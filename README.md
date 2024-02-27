@@ -183,9 +183,3 @@ tmux
 
 python3 main.py
 ```
-
-## Contact<a name="contact"></a>
-
-For any issues or inquiries, please contact the developer:
-
-- Telegram: [AFz](https://t.me/TalkToHand)
